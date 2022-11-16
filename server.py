@@ -67,7 +67,7 @@ async def kirimpesans():
         result = {"status":"error", "message_length":len(pesan),"total_target":len(request.json["usernames"]), "target":request.json["usernames"],"usernames_error_list":errorProsesUsernames,"error_message": "telegram api has been limited", "usersnames_error_messages":errorProsesMessage, "time_request": waktu}
         return result, 500
 
-    result = {"status":"error", "message_length":len(pesan),"total_target":len(request.json["usernames"]), "target":request.json["usernames"],"usernames_error_list":errorProsesUsernames,"error_message": None, "usersnames_error_messages":None, "time_request": waktu}
+    result = {"status":"success", "message_length":len(pesan),"total_target":len(request.json["usernames"]), "target":request.json["usernames"],"usernames_error_list":errorProsesUsernames,"error_message": None, "usersnames_error_messages":None, "time_request": waktu}
     return result, 200
 
 if __name__ == '__main__':
